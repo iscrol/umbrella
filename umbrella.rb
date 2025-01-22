@@ -20,3 +20,10 @@ currently = pirate_parsed_response["currently"]
 temp = currently["temperature"]
 
 pp "It is " + temp.to_s + " degrees right now."
+data = pirate_parsed_response["hourly"]["data"]
+
+i = 0
+while i < 12
+  pp data[i]["precipProbability"]
+  i += 1
+end
